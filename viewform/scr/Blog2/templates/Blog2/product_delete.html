@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Delete {% endblock %}
+
+{% block content %}
+    <form action="." method="post">
+        {{ object_list }}
+        <p>Do you want to delete "{{ object_list.name }}"</p>
+        <p> <input type="submit" value="yes"/><a href="{% url 'update' object_list.id %}" >cancel</a> </p>
+    </form>
+
+{% endblock %}
